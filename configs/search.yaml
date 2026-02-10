@@ -1,0 +1,22 @@
+searches:
+  - keywords:
+      - "AI engineer"
+    locations:
+      - "San Francisco, CA"
+      - "Remote"
+    job_boards:
+      - indeed
+      - linkedin
+      - glassdoor
+      - zip_recruiter
+    company_pages:
+      - url: "https://careers.google.com/jobs/results/?q={keyword}&location={location}"
+        js_render: true
+      - url: "https://www.metacareers.com/jobs?q={keyword}"
+        js_render: true
+      - url: "https://www.amazon.jobs/en/search?base_query={keyword}&loc_query={location}"
+        js_render: false
+
+schedule:
+  cron: "0 8 * * *"  # daily at 8 AM
+  timezone: "UTC"

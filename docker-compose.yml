@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: career_crawler_db
+    environment:
+      POSTGRES_USER: crawler
+      POSTGRES_PASSWORD: crawler_pass
+      POSTGRES_DB: career_crawler
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  pgdata:
